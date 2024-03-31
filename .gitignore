@@ -1,0 +1,45 @@
+# Python compiled bytecode
+__pycache__/
+
+# Python 3 compiled bytecode
+*.pyc
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Configuration files
+*.ini
+*.cfg
+*.conf
+
+# Log files
+*.log
+
+# Distribution / packaging
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+
+# Temporary files
+*.swp
+*.swo
+*~
+
+# VS Code specific files
+.vscode/
+
+# PyCharm specific files
+.idea/
+
+# Image files
+*.jpg
+*.jpeg
+*.png
+
+# Text files
+*.txt
+
