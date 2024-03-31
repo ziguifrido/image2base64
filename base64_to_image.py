@@ -1,4 +1,4 @@
-import base64util
+import base64util as b64u
 import argparse
 
 BANNER = "\nBase64 to Image\n"
@@ -19,20 +19,20 @@ def main():
         else:
             base64_path = args.input
 
-        if not base64util.validate_file_path(base64_path, EXTENSIONS_BASE64):
+        if not b64u.validate_file_path(base64_path, EXTENSIONS_BASE64):
             print(f"ERROR: Invalid Base64 path: {base64_path}")
         else:
-            image = base64util.base64_to_image(base64_path)
+            image = b64u.base64_to_image(base64_path)
 
             if not args.output:
                 output_file_path = input("\n\nEnter the output file path to save the Image: ")
             else:
                 output_file_path = args.output
 
-            if not base64util.validate_file_extension(output_file_path, EXTENSIONS_IMAGE):
+            if not b64u.validate_file_extension(output_file_path, EXTENSIONS_IMAGE):
                 print(f"ERROR: Invalid output path: {output_file_path}")
             else:
-                base64util.save_image_to_file(image, output_file_path)
+                b64u.save_image_to_file(image, output_file_path)
 
                 print(f"\n\nThe Image was saved to '{output_file_path}'.")
 
